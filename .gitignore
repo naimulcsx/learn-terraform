@@ -1,0 +1,7 @@
+# private keys
+*.pem
+
+# terraform files
+.terraform
+.terraform.lock.hcl
+*.tfstate
