@@ -6,6 +6,11 @@
 
 ## Steps
 
+## Prerequisites
+
+- You have AWS CLI and configured with a valid security credentials.
+- You have a key pair named `aws_login`. To create go to your AWS console and create a key pair named `aws_login`. After you've created the key pair, you'll have a file downloaded called `aws_login.pem`. We will use this file to SSH into our server later.
+
 ### Create Terraform Project
 
 Create a directory for your Terraform project and create a Terraform configuration file (usually named `main.tf`) in that directory.
@@ -27,8 +32,6 @@ resource "aws_instance" "my-app" {
   }
 }
 ```
-
-Note: In order to make this configuration work, go to your AWS console and create a key pair named `aws_login`. After you've created the key pair, you'll have a file downloaded called `aws_login.pem`. We can use this file to SSH into our server.
 
 ### Initialize Terraform
 
@@ -81,4 +84,4 @@ We can run the following command to connect to the EC2 instance we've just creat
 ssh -i ./aws_login.pem ubuntu@3.80.128.220
 ```
 
-Can you connect? No? You can try to connect with the EC2 Instance Connect from AWS Console. But it will not work either. What's the issue here? We'll find this out in the next exercise.
+This time you'll be able to connect to the remote VM.
