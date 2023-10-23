@@ -77,15 +77,13 @@ Terraform will display a plan of the changes it's going to make. Review the plan
 
 ### Accessing through SSH
 
-We can run the following command to connect to the EC2 instance we've just created with Terraform. Replace `3.80.128.220` with the public IP of your instance.
+We can run the following command to connect to the EC2 instance we've just created with Terraform. Replace `INSTANCE_PUBLIC_IP` with the public IP of your instance.
 
 ```
-ssh -i ./aws_login.pem ubuntu@3.80.128.220
+ssh -i ./aws_login.pem ubuntu@INSTANCE_PUBLIC_IP
 ```
 
-Can you connect? No? You can try to connect with the EC2 Instance Connect from AWS Console. But it will not work either. What's the issue here? We'll find this out in the next exercise.
-
-
+This time you'll be able to connect to the remote VM.
 ### Destroy Resources
 
 If you want to remove the resources created by Terraform configuration, you can use the following command:
