@@ -32,7 +32,7 @@ provider "aws" {
 
 We've defined all the variables in the locals block, and we'll use them when we define the resources.
 
-```
+```hcl
 locals {
   sg_name        = "sg_vm1"
   sg_description = "security group for vm1 instance"
