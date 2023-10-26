@@ -114,7 +114,11 @@ Run the following command to create the AWS resources defined in the Terraform c
 terraform apply
 ```
 
-Terraform will display a plan of the changes it's going to make. Review the plan and type "yes" when prompted to apply it.
+Before terraform displays a plan of the changes it's going to make, it'll prompt for the input variables, it will ask to input `instance_name`, `instance_type`, but `instance_ami` will not be asked, because we provided a default value. After we've input the values for the variables, we will review the plan and type "yes" when prompted to apply it. If we don't want to be prompted, we can also pass the values in the command while applying
+
+```bash
+terraform apply -var="instance_name=vm1-with-input-vars" -var="instance_type=t2.micro"
+```
 
 ### Accessing through Web Browser
 
